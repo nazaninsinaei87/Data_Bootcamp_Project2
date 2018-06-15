@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Wine not</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 jumbotron text-left title_box">
+                    <h1 class="titleFont" style="color:#800000;">Wine not?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <h1 class="title">Welcome to the wonderful world of wine</h1>
+                <h4 class="site-intro">Explore some of the best wines in the world through our interactive dashboard.</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="well">
+                        <h4 style="color: white;">Select Wine Variety:</h4>
+                        <select id="varietyDataset" onchange="varietyOptionsChanged(this.value)"></select>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                    <div class="well">
+                        <h4 style="color: white;">Select Geographic Region</h4>
+                        <select id="regionDataset" onchange="regionOptionsChanged(this.value)"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-md-6">
+                    <div id="pie">
+                        <h3>The Pie Chart Goes Here</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="bubble">
+                        <h3>The Bubble Chart Goes Here</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <p class="quote">“Wine is one of the most civilized things in the world and one of the most natural things of the world that has been brought to the greatest perfection, and it offers a greater range for enjoyment and appreciation than, possibly, any other purely sensory thing.”</p>
+                    <p class="quote_attribute">-Ernest Hemingway</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="map">
+                        <h3>The Map Goes Here</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>UCBerckly Data Analytics Project 2</p>
+            <p>Project 2</p>
+        </div>
+    </body>
+</html>
