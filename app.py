@@ -43,17 +43,18 @@ def varieties():
     stmt = session.query(Wine).statement
     wine_df = pd.read_sql_query(stmt, session.bind)
     
-    return jsonify(list(df.variety.unique()))
+    return jsonify(list(wine_df.variety.unique()))
 
 @app.route("/region")
-def region():
-    stmt = session.query(Coord).statement
+def regions():
+    stmt = session.query(Coordinate).statement
     region_df = pd.read_sql_query(stmt, session.bind)
     data = [{
         "region": region_df["region_1"].values.tolist(),
+        "country": region_df["country"].values.tolist(),
         "coordinates": region_df["coordinates"].values.tolist()
-        "country" : region_df["country"].values.tolist()
     }]
+    return jsonify(data)
 
 @app.route('/varieties/<variety>')
 def wines(variety):
