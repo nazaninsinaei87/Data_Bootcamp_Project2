@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Wine not</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 jumbotron text-left title_box">
+                    <h1 class="titlefont" style="color:#800000;">Wine not?</h1>
+                    <p style="color:#800000; font-family: fantasy;">Best wines in the world</p>
+                </div>
+            </div>
+            <div class="row">
+                <p class="site-intro">What this web site is all about. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="well">
+                        <h5 style="color: white;">Select Wine Variety:</h5>
+                        <select id="selDataset" onchange="optionsChanged(this.value)"></select>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Region</h3>
+                        </div>
+                        <div id="metadata" class="panel-body"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-6">
+                    <div id="pie"></div>
+                </div>
+                <div class="col-6">
+                    <div id="bubble"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
