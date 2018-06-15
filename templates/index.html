@@ -7,7 +7,7 @@
         <title>Wine not</title>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../static/style.css">
     </head>
     <body>
         <div class="container">
@@ -66,5 +66,59 @@
             <p>UCBerckly Data Analytics Project 2</p>
             <p>Project 2</p>
         </div>
+        <script>
+            // reference to the dropdown select tag
+                var varietySelector = document.getElementById('varietyDataset');
+
+                // read in the data to populate the dropdown
+                Plotly.d3.json('/varieties', function(error, sampleNames){
+                    for (var i=0; i < sampleNames.length; i++) {
+                        var currentOption = document.createElement('option');
+                        currentOption.text = sampleNames[i];
+                        currentOption.value = sampleNames[i];
+                        varietySelector.appendChild(currentOption);
+                    }
+                });
+                // reference to the dropdown select tag
+                var regionSelector = document.getElementById('regionDataset');
+
+                // read in the data to populate the dropdown
+                Plotly.d3.json('/region', function(error, sampleNames){
+                    for (var i=0; i < sampleNames.length; i++) {
+                        var currentOption = document.createElement('option');
+                        currentOption.text = sampleNames[i];
+                        currentOption.value = sampleNames[i];
+                        regionSelector.appendChild(currentOption);
+                    }
+                });
+            function varietyOptionsChanged() {
+                // reference to the dropdown select tag
+                var selector = document.getElementById('varietyDataset');
+
+                // read in the data to populate the dropdown
+                Plotly.d3.json('/varieties', function(error, sampleNames){
+                    for (var i=0; i < sampleNames.length; i++) {
+                        var currentOption = document.createElement('option');
+                        currentOption.text = sampleNames[i];
+                        currentOption.value = sampleNames[i];
+                        selector.appendChild(currentOption);
+                    }
+                });
+            }
+            function regionOptionsChanged() {
+                // reference to the dropdown select tag
+                var selector = document.getElementById('regionDataset');
+
+                // read in the data to populate the dropdown
+                Plotly.d3.json('/region', function(error, sampleNames){
+                    for (var i=0; i < sampleNames.length; i++) {
+                        var currentOption = document.createElement('option');
+                        currentOption.text = sampleNames[i];
+                        currentOption.value = sampleNames[i];
+                        selector.appendChild(currentOption);
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
