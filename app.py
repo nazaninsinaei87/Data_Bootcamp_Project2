@@ -36,7 +36,18 @@ session = Session(engine)
 @app.route("/")
 def index():
     return render_template('index.html')
-    
+
+@app.route('/winedata')
+def winedata():
+    wineData = []
+    wine_data = {}
+    data = session.query(Wine).first()
+    wine_data = (data.__dict__)
+    wine_keys = ["country", "designation", "points", "price", "region_1", "title", "variety", "winery"]
+    data_wine = {key:wine_data[key] for key in wine_keys}
+    wineData.append(data_wine)
+    return jsonify(wineData)
+
 @app.route('/varieties')
 def varieties():
 
