@@ -34,6 +34,23 @@ p {
     font-family: fantasy;
 }
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #5F9EA0;
+    color: white;
     text-align: center;
+}
+
+.quote_attribute {
+    text-align: right;
+}
+
+.wine_image {
+    background-image: url(wine_and_grapes.jpg);
+}
+
+.img-thumbnail {
+    background: #5F9EA0;
 }
