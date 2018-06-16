@@ -37,3 +37,15 @@ p {
     background-color: #5F9EA0;
     text-align: center;
 }
+
+.quote_attribute {
+    text-align: right;
+}
+
+.wine_image {
+    background-image: url(wine_and_grapes.jpg);
+}
+
+.img-thumbnail {
+    background: #5F9EA0;
+}
