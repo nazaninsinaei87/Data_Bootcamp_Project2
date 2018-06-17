@@ -4,15 +4,7 @@ var url = "/region"
 var url1 = "/varieties/White%20Blend"
 
 
-d3.json(url1, function(wineData){
-    console.log(wineData)
-    d3.json(url, function(regionData){
-        var wineMarkers = [];
-        var region = regData[0].region;
-        var coords = regData[0].coordinates;
-        //for (var)
-    })
-});
+d3.json(url, createMarkers);
 
 function createMarkers(response){
     

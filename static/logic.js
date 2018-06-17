@@ -25,7 +25,7 @@ function createMarkers(response){
         weight:1,
         opacity: 1,
         fillOpacity: 0.8,
-        radius: 2
+        radius: 20000
         };
          
         // for each winery location, create a marker and bind a pop with properties
